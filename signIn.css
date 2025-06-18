@@ -1,0 +1,540 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5DC;
+    color: #2F2F2F;
+    padding-top: 15vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2F2F2F;
+    color: #F5F5DC;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    border-radius: 0 0 15px 15px;
+}
+
+header .logo img {
+    width: 17vh;
+    height: auto;
+    padding-left: 10px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.25rem;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+    font-size: 1rem;
+}
+
+nav ul li a {
+    color: #F5F5DC;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    text-decoration: none;
+    background-color: #4CAF50;
+}
+
+.how-box {
+    position: relative;
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.how-box::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    border: 2px solid #333;
+    z-index: -1;
+}
+
+.how-we-works {
+    text-align: center;
+    background-color: #F5F5DC;
+    padding: 40px 40px 0px 40px;
+    border-radius: 0 15px 15px;
+}
+
+.how-we-works h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+.how-we-works h2 span {
+    font-weight: bold;
+    color: #444444;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.step {
+    text-align: center;
+    max-width: 200px;
+}
+
+.icon-container {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #FFD700;
+    border-radius: 15px 0 15px 0;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.icon-container img {
+    width: 100%;
+    height: auto;
+}
+
+.step p {
+    font-size: 1rem;
+    color: #666666;
+    margin: 0;
+}
+
+.order-button {
+    display: inline-block;
+    background-color: #8BC34A;
+    border: none;
+    font-size: 1.2rem;
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    padding: 1.3vw 3vw;
+    border-radius: 30px;
+    text-decoration: none;
+    margin: 3vh;
+}
+
+.order-button:hover {
+    opacity: 0.9;
+}
+
+.order-button:active {
+    opacity: 0.5;
+}
+
+.sign-in-section {
+    width: 84%;
+    margin: 5vh auto;
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.sign-in-section h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.error {
+    display: none;
+    color: red;
+    margin-top: 5px;
+    font-size: 0.875rem;
+}
+
+.error.visible {
+    display: block;
+}
+
+.sign-in-section .form-group {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.sign-in-section label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.required {
+    color: red;
+}
+
+.sign-in-section input[type="text"],
+.sign-in-section input[type="email"],
+.sign-in-section input[type="date"],
+.sign-in-section input[type="tel"],
+.sign-in-section select,
+.sign-in-section textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.sign-in-section input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.sign-in-section input::placeholder,
+.sign-in-section textarea::placeholder {
+    color: #999;
+    opacity: 1;
+}
+
+.sign-in-section button {
+    width: 100%;
+    padding: 1.5vh;
+    font-size: 1.2rem;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sign-in-section button:hover {
+    background-color: #45a049;
+}
+
+.privacy {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#error-message {
+    color: red;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.footer-section {
+    display: flex;
+    width: 100%;
+    background-color: #2F2F2F;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.contact-footer {
+    flex: 1;
+    padding: 20px;
+    background: url('images/wood-texture.jpg') no-repeat center center;
+    background-size: cover;
+    color: #ffffff;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact-footer p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.contact-footer .icon {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: right;
+    margin: 20px 0;
+}
+
+.social-icons a {
+    margin-right: 10px;
+}
+
+.social-icons a img {
+    width: 24px;
+    height: 24px;
+}
+
+nav {
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: #ffffff;
+    margin-right: 15px;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.map {
+    flex: 1;
+    padding: 20px;
+}
+
+.map img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    display: block;
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        font-size: 1rem;
+        padding-top: 10vh;
+        padding: 5%;
+    }
+
+    header {
+        flex-direction: column;
+        padding: 5%;
+        text-align: center;
+    }
+
+    header .logo {
+        font-size: 1.5rem;
+        margin-bottom: 2%;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 2.5rem;
+        cursor: pointer;
+        margin-right: 2%;
+        color: #F5F5DC;
+    }
+
+    #menu-toggle:checked + .menu-icon + ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: #2F2F2F;
+        position: absolute;
+        top: 15%;
+        left: 0;
+        z-index: 999;
+        margin: 0;
+    }
+
+    nav ul li {
+        margin: 5% 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 4%;
+    }
+
+    .how-box {
+        padding: 5%;
+        margin: 5% 0;
+    }
+
+    .how-we-works {
+        padding: 5% 2%;
+    }
+
+    .how-we-works h2 {
+        font-size: 1.5rem;
+    }
+
+    .steps-container {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5%;
+    }
+
+    .step {
+        max-width: 100%;
+        margin-bottom: 5%;
+    }
+
+    .order-button {
+        width: 80%;
+        padding: 5%;
+        font-size: 1rem;
+    }
+
+    .sign-in-section {
+        width: 100%;
+        margin: 5% auto;
+        padding: 5%;
+    }
+
+    .sign-in-section button {
+        padding: 5%;
+        font-size: 1rem;
+    }
+
+    .footer-section {
+        flex-direction: column;
+        padding: 5%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-footer, .map {
+        width: 100%;
+        margin-bottom: 5%;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+    body {
+        font-size: 1.1rem;
+        padding: 5%;
+        padding-top: 10vh;
+    }
+
+    header {
+        flex-direction: row;
+        padding: 2%;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    header .logo {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: row;
+        display: flex;
+        justify-content: center;
+        gap: 2%;
+    }
+
+    nav ul li {
+        margin: 0 2%;
+    }
+
+    nav ul li a {
+        padding: 1%;
+    }
+
+    .how-box {
+        padding: 5%;
+        margin: 5% 0;
+    }
+
+    .how-we-works {
+        padding: 5% 2%;
+    }
+
+    .how-we-works h2 {
+        font-size: 1.8rem;
+    }
+
+    .steps-container {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .step {
+        max-width: 45%;
+        margin-bottom: 5%;
+    }
+
+    .order-button {
+        width: 60%;
+        padding: 3%;
+        font-size: 1.1rem;
+    }
+
+    .sign-in-section {
+        width: 100%;
+        margin: 5% auto;
+        padding: 5%;
+    }
+
+    .sign-in-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .sign-in-section .form-group {
+        font-size: 1.1rem;
+    }
+
+    .sign-in-section button {
+        padding: 3%;
+        font-size: 1.1rem;
+    }
+
+    .footer-section {
+        flex-direction: row;
+        padding: 5%;
+    }
+
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .contact-footer, .map {
+        width: 45%;
+        margin-bottom: 2%;
+    }
+}

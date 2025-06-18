@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAteriNgz - Sign In</title>
+    <link rel="stylesheet" href="signIn.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/LogoCAteriNgz.png" alt="CAteriNgz Logo">
+            <p>CAteriNgz</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html#Home">Home</a></li>
+                <li><a href="products.html#OurProducts">Our Products</a></li>
+                <li><a href="reviews.html#testimonials">Reviews</a></li>
+                <li><a href="aboutUs.html#AboutUs">About Us</a></li>
+                <li><a href="signIn.html" class="active">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="how-we-works">
+        <div class="how-box">
+            <h2>How Do We <span>Work?</span></h2>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="icon-container">
+                        <img src="images/WorkLogo1.png" alt="Sign Up Icon">
+                    </div>
+                    <p>Sign In & Choose From Our Weekly Menu</p>
+                </div>
+                <div class="step">
+                    <div class="icon-container">
+                        <img src="images/WorkLogo2.png" alt="Delivery Icon">
+                    </div>
+                    <p>We Will Deliver Your Purchase</p>
+                </div>
+                <div class="step">
+                    <div class="icon-container">
+                        <img src="images/WorkLogo3.png" alt="Eat Icon">
+                    </div>
+                    <p>Enjoy Our Tasty Organic Food!</p>
+                </div>
+            </div>
+            <a href="#sign-in-section" class="order-button">ORDER NOW</a>
+        </div>
+    </section>
+
+    <section id="sign-in-section" class="sign-in-section">
+        <h1>Sign In</h1>
+        <form id="signInForm">
+            <div class="form-group">
+                <label for="name">Name: <span class="required">*</span></label>
+                <input type="text" id="name" name="name" placeholder="At least 2 characters" required>
+                <div class="error"></div>
+            </div>
+    
+            <div class="form-group">
+                <label for="email">Email: <span class="required">*</span></label>
+                <input type="email" id="email" name="email" placeholder="e.g., example@mail.com" required>
+                <div class="error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number: <span class="required">*</span></label>
+                <input type="tel" id="phone" name="phone" placeholder="+62xxxxxxxxxx" required>
+                <div class="error"></div>
+            </div>
+    
+            <div class="form-group">
+                <label for="address">Address: <span class="required">*</span></label>
+                <input type="text" id="address" name="address" placeholder="At least 10 characters" required>
+                <div class="error"></div>
+            </div>
+    
+            <div class="form-group">
+                <label for="gender">Gender: <span class="required">*</span></label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select your gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+                <div class="error"></div>
+            </div>
+    
+            <div class="form-group">
+                <label for="dob">Date of Birth: <span class="required">*</span></label>
+                <input type="date" id="dob" name="dob" required>
+                <small>Must be at least 18 years old</small>
+                <div class="error"></div>
+            </div>
+    
+            <div class="privacy">
+                <input type="checkbox" id="privacy" name="privacy" required>
+                <label for="privacy">I agree to the privacy policy <span class="required">*</span></label>
+                <div class="error"></div>
+            </div>
+    
+            <button type="submit">Submit</button>
+        </form>
+        <div id="error-message"></div>
+    </section>
+
+    <footer class="footer-section">
+        <div class="footer-content">
+            <div class="contact-footer">
+                <p><span class="icon">&#128222;</span> +62 123 456 7890</p>
+                <p><span class="icon">&#128205;</span> Jl. Pahlawan Seribu No.123, Tangerang Selatan – Banten, 15310</p>
+                <div class="social-icons">
+                    <a href="#"><img src="images/WALogo.png" alt="WhatsApp"></a>
+                    <a href="#"><img src="images/FBLogo.png" alt="Facebook"></a>
+                    <a href="#"><img src="images/IGLogo.png" alt="Instagram"></a>
+                </div>
+                <nav>
+                    <a href="home.html#Home">Home</a>
+                    <a href="products.html#OurProducts">Our Products</a>
+                    <a href="reviews.html#Reviews">Reviews</a>
+                    <a href="aboutUs.html#AboutUs">About Us</a>
+                    <a href="signIn.html#SignIn">Sign In</a>
+                </nav>
+                <p>2024 Copyright. All Rights Reserved.</p>
+            </div>
+            <div class="map">
+                <img src="images/maps.jpg" alt="Map to Location">
+            </div>
+        </div>
+    </footer>
+
+    <script src="signIn.js"></script>
+</body>
+</html>

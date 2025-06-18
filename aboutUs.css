@@ -1,0 +1,665 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5DC;
+    color: #F5F5DC;
+    padding-top: 15vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2F2F2F;
+    color: #F5F5DC;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    border-radius: 0 0 15px 15px;
+}
+
+header .logo img {
+    width: 17vh;
+    height: auto;
+    padding-left: 10px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.25rem;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+    font-size: 1rem;
+}
+
+nav ul li a {
+    color: #F5F5DC;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #4CAF50;
+    text-decoration: none;
+}
+
+section {
+    padding: 60px 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 95%;
+    text-align: center;
+    font-size: 1rem;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-top: -3vh;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    padding: 7vh;
+}
+
+.intro img {
+    max-width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mission-vision-content,
+.our-story-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mission-vision-section h2 {
+    margin-top: -3vh;
+}
+
+.mission,
+.vision {
+    display: flex;
+    flex-direction: row;
+    gap: 5vh;
+    text-align: justify;
+    background-color: #F5F5DC;
+    color: #2F2F2F;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mission h2, .vision h2 {
+    color: #2F2F2F;
+    margin-top: 0vh;
+}
+
+.our-story-wrapper {
+    position: relative;
+    max-width: 95%;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.our-story-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 2;
+}
+
+.our-story-overlay h2 {
+    font-size: 5rem;
+    color: #ffffff;
+    opacity: 1;
+}
+
+.our-story-wrapper:hover .our-story-overlay {
+    opacity: 0;
+}
+
+.our-story-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+}
+
+.our-story-content {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    color: #2F2F2F;
+    padding: 7vh;
+    box-sizing: border-box;
+    z-index: 3;
+    overflow-y: auto;
+    border-radius: 15px;
+    text-align: justify;
+    text-indent: 5vh;
+}
+
+.our-story-content h2 {
+    color: #2F2F2F;
+    text-align: center;
+}
+
+.our-story-wrapper:hover .our-story-content {
+    display: block;
+}
+
+.commitment-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5vh;
+    gap: 5vh;
+    text-align: justify;
+    text-indent: 5vh;
+}
+
+.commitment-content p {
+    font-size: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.8);;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 3vh;
+}
+
+.commitment-content img {
+    max-width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-content {
+    display: flex;
+    justify-content: center;
+    gap: 7vh;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-image {
+    width: 40vh;
+    height: 50vh;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.testimonial {
+    display: flex;
+    flex-direction: row;
+    gap: 5vh;
+    margin-top: 20px;
+    background-color: #E6E6FA;
+    color: #2F2F2F;
+    padding: 3vh 7vh;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+}
+
+.testimonial img {
+    width: 15vh;
+    height: 15vh;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+}
+
+.review-button {
+    display: inline-block;
+    background-color: #8BC34A;
+    border: none;
+    font-size: 1.2rem;
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    padding: 1.3vw 3vw;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-top: 5vh;
+}
+
+.review-button:hover {
+    opacity: 0.9;
+}
+
+.review-button:active {
+    opacity: 0.5;
+}
+
+.footer-section {
+    display: flex;
+    width: 100%;
+    background-color: #2F2F2F;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-footer {
+    flex: 1;
+    padding: 20px;
+    background: url('images/wood-texture.jpg') no-repeat center center;
+    background-size: cover;
+    color: #ffffff;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact-footer p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.contact-footer .icon {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: right;
+    margin: 20px 0;
+}
+
+.social-icons a {
+    margin-right: 10px;
+}
+
+.social-icons a img {
+    width: 24px;
+    height: 24px;
+}
+
+nav {
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: #ffffff;
+    margin-right: 15px;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.map {
+    flex: 1;
+    padding: 20px;
+}
+
+.map img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    display: block;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .intro,
+    .mission-vision-content,
+    .our-story-content,
+    .commitment-content,
+    .team-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro img,
+    .mission,
+    .vision,
+    .commitment-content img {
+        width: 100%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-footer, .map {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        font-size: 1rem;
+        padding-top: 10vh;
+        padding: 5%;
+    }
+
+    header {
+        flex-direction: column;
+        padding: 5%;
+        text-align: center;
+    }
+
+    header .logo {
+        font-size: 1.5rem;
+        margin-bottom: 2%;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 2.5rem;
+        cursor: pointer;
+        margin-right: 2%;
+        color: #F5F5DC;
+    }
+
+    #menu-toggle:checked + .menu-icon + ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: #2F2F2F;
+        position: absolute;
+        top: 15%;
+        left: 0;
+        z-index: 999;
+        margin: 0;
+    }
+
+    nav ul li {
+        margin: 5% 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 4%;
+    }
+
+    section {
+        padding: 5%;
+        margin: 5% 0;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    .intro {
+        padding: 5%;
+    }
+
+    .mission,
+    .vision {
+        flex-direction: column;
+        width: 100%;
+        padding: 5%;
+    }
+
+    .our-story-wrapper {
+        width: 100%;
+        margin-bottom: 5%;
+    }
+
+    .our-story-content {
+        padding: 5%;
+        font-size: 1rem;
+    }
+
+    .commitment-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 5%;
+    }
+
+    .commitment-content p {
+        font-size: 1rem;
+    }
+
+    .team-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-image {
+        width: 80%;
+        height: auto;
+    }
+
+    .testimonial {
+        flex-direction: column;
+        padding: 5%;
+        text-align: center;
+    }
+
+    .testimonial img {
+        width: 20%;
+        height: auto;
+        margin-bottom: 2%;
+    }
+
+    .review-button {
+        width: 80%;
+        padding: 5%;
+        font-size: 1rem;
+    }
+
+    .footer-section {
+        flex-direction: column;
+        padding: 5%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-footer, .map {
+        width: 100%;
+        margin-bottom: 5%;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+    body {
+        font-size: 1.1rem;
+        padding: 5%;
+        padding-top: 10vh;
+    }
+
+    header {
+        flex-direction: row;
+        padding: 2%;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    header .logo {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2%;
+    }
+
+    nav ul li {
+        margin: 0 5%;
+    }
+
+    nav ul li a {
+        padding: 2%;
+    }
+
+    section {
+        padding: 5%;
+        margin: 4% 0;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    .intro {
+        padding: 5%;
+    }
+
+    .mission,
+    .vision {
+        flex-direction: column;
+        width: 80%;
+        padding: 4%;
+        margin: 4% 0;
+    }
+
+    .our-story-wrapper {
+        width: 80%;
+        margin-bottom: 4%;
+    }
+
+    .our-story-content {
+        padding: 4%;
+        font-size: 1.1rem;
+    }
+
+    .commitment-content {
+        flex-direction: column;
+        padding: 4%;
+        text-align: center;
+    }
+
+    .commitment-content p {
+        font-size: 1.1rem;
+    }
+
+    .team-content {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4%;
+    }
+
+    .team-image {
+        width: 45%;
+        height: auto;
+    }
+
+    .testimonial {
+        flex-direction: column;
+        padding: 4%;
+        text-align: center;
+    }
+
+    .testimonial img {
+        width: 25%;
+        height: auto;
+        margin-bottom: 4%;
+    }
+
+    .review-button {
+        width: 60%;
+        padding: 4%;
+        font-size: 1.1rem;
+    }
+
+    .footer-section {
+        flex-direction: row;
+        padding: 4%;
+    }
+
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .contact-footer, .map {
+        width: 45%;
+        margin-bottom: 2%;
+    }
+}
